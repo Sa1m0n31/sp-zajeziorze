@@ -22,38 +22,129 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'zajeziorze' ); ?></a>
+<div class="container">
+    <!-- HEADER -->
+    <div class="topBar d-desktop">
+        <div class="w flex">
+            <div class="topBar__left flex flex--start">
+                <span class="topBar__left__item flex flex--start">
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/szkola.svg"; ?>" alt="szkola" />
+                    Szkoła Podstawowa w Zajeziorzu
+                </span>
+                <a href="mailto:zbogoski@o2.pl" class="topBar__left__item flex flex--start">
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/mail.svg"; ?>" alt="szkola" />
+                    zbogoski@o2.pl
+                </a>
+                <a href="tel:+48609516900" class="topBar__left__item flex flex--start">
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/telefon.svg"; ?>" alt="szkola" />
+                    609 516 900
+                </a>
+            </div>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$zajeziorze_description = get_bloginfo( 'description', 'display' );
-			if ( $zajeziorze_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $zajeziorze_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+            <div class="topBar__right flex flex--end">
+                <a href="https://www.gov.pl/web/bip" target="_blank" class="topBar__right__link">
+                    Biuletyn informacji publicznej
+                </a>
+                <a href="<?php echo get_page_link(get_page_by_title('Stowarzyszenie')->ID); ?>" target="_blank" class="topBar__right__link">
+                    Stowarzyszenie
+                </a>
+                <a href="https://uonetplus.vulcan.net.pl/gminakikol" target="_blank" class="topBar__right__link topBar__right__link--log">
+                    e-Dziennik
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="topMenu">
+        <div class="mobileMenu d-mobile">
+            <button class="mobileMenu__close" onclick="closeMobileMenu()">
+                &times;
+            </button>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'zajeziorze' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+            <a class="mobileMenu__item" href="<?php echo home_url(); ?>">
+                Strona główna
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Wydarzenia')->ID); ?>">
+                Wydarzenia
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Nauczyciele')->ID); ?>">
+                Nauczyciele
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Samorząd szkolny')->ID); ?>">
+                Samorząd szkolny
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Rada rodziców')->ID); ?>">
+                Rada rodziców
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Baza szkoły')->ID); ?>">
+                Baza szkoły
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Stowarzyszenie')->ID); ?>">
+                Stowarzyszenie
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Historia')->ID); ?>">
+                Historia
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Klasy')->ID); ?>">
+                Klasy
+            </a>
+            <a class="mobileMenu__item" href="<?php echo get_page_link(get_page_by_title('Rekrutacja')->ID); ?>">
+                Rekrutacja
+            </a>
+        </div>
+
+        <div class="w flex">
+            <a href="<?php echo home_url(); ?>" class="topMenu__logoLeft">
+                <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-stowarzyszenie.png"; ?>" alt="stowarzyszenie" />
+            </a>
+            <div class="topMenu__menu flex d-desktop">
+                <a class="topMenu__menu__item flex flex--start" href="<?php echo home_url(); ?>">
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/home.svg"; ?>" alt="home" />
+                    Strona główna
+                </a>
+                <span class="topMenu__menu__item flex flex--start topMenu__menu__item--dropdown">
+                    Szkoła
+                    <img class="img img--arrow" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-down.svg"; ?>" alt="down" />
+
+                    <span class="topMenu__menu__item__dropdown">
+                        <a class="topMenu__menu__item__dropdown__item" href="<?php echo get_page_link(get_page_by_title('Wydarzenia')->ID); ?>">
+                            Wydarzenia
+                        </a>
+                         <a class="topMenu__menu__item__dropdown__item" href="<?php echo get_page_link(get_page_by_title('Nauczyciele')->ID); ?>">
+                             Nauczyciele
+                        </a>
+                         <a class="topMenu__menu__item__dropdown__item" href="<?php echo get_page_link(get_page_by_title('Samorząd szkolny')->ID); ?>">
+                            Samorząd szkolny
+                        </a>
+                         <a class="topMenu__menu__item__dropdown__item" href="<?php echo get_page_link(get_page_by_title('Rada rodziców')->ID); ?>">
+                            Rada rodziców
+                        </a>
+                         <a class="topMenu__menu__item__dropdown__item" href="<?php echo get_page_link(get_page_by_title('Baza szkoły')->ID); ?>">
+                            Baza szkoły
+                        </a>
+                         <a class="topMenu__menu__item__dropdown__item" href="<?php echo get_page_link(get_page_by_title('Stowarzyszenie')->ID); ?>">
+                            Stowarzyszenie
+                        </a>
+                         <a class="topMenu__menu__item__dropdown__item" href="<?php echo get_page_link(get_page_by_title('Historia')->ID); ?>">
+                            Historia
+                        </a>
+                    </span>
+                </span>
+                <a class="topMenu__menu__item" href="<?php echo get_page_link(get_page_by_title('Klasy')->ID); ?>">
+                    Klasy
+                </a>
+                <a class="topMenu__menu__item" href="<?php echo get_page_link(get_page_by_title('Rekrutacja')->ID); ?>">
+                    Rekrutacja
+                </a>
+                <a class="topMenu__menu__item" href="<?php echo home_url(); ?>#kontakt">
+                    Kontakt
+                </a>
+            </div>
+            <a href="<?php echo home_url(); ?>" class="topMenu__logoRight">
+                <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-sp-zajeziorze.png"; ?>" alt="logo" />
+            </a>
+
+            <button class="btn--menu d-mobile" onclick="openMobileMenu()">
+                <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/menu.svg"; ?>" alt="menu" />
+            </button>
+        </div>
+    </div>

@@ -16,15 +16,15 @@
         <div class="w flex">
             <div class="topBar__left flex flex--start">
                 <span class="topBar__left__item flex flex--start">
-                    <img class="img" src="./img/szkola.svg" alt="szkola" />
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/szkola.svg"; ?>" alt="szkola" />
                     Szkoła Podstawowa w Zajeziorzu
                 </span>
                 <a href="mailto:zbogoski@o2.pl" class="topBar__left__item flex flex--start">
-                    <img class="img" src="./img/mail.svg" alt="szkola" />
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/mail.svg"; ?>" alt="szkola" />
                     zbogoski@o2.pl
                 </a>
                 <a href="tel:+48609516900" class="topBar__left__item flex flex--start">
-                    <img class="img" src="./img/telefon.svg" alt="szkola" />
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/telefon.svg"; ?>" alt="szkola" />
                     609 516 900
                 </a>
             </div>
@@ -85,16 +85,16 @@
 
         <div class="w flex">
             <a href="#" class="topMenu__logoLeft">
-                <img class="img" src="./img/logo-stowarzyszenie.png" alt="stowarzyszenie" />
+                <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-stowarzyszenie.png"; ?>" alt="stowarzyszenie" />
             </a>
             <div class="topMenu__menu flex d-desktop">
                 <a class="topMenu__menu__item flex flex--start" href="#">
-                    <img class="img" src="./img/home.svg" alt="home" />
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/home.svg"; ?>" alt="home" />
                     Strona główna
                 </a>
                 <span class="topMenu__menu__item flex flex--start topMenu__menu__item--dropdown">
                     Szkoła
-                    <img class="img img--arrow" src="./img/arrow-down.svg" alt="down" />
+                    <img class="img img--arrow" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-down.svg"; ?>" alt="down" />
 
                     <span class="topMenu__menu__item__dropdown">
                         <a class="topMenu__menu__item__dropdown__item" href="#">
@@ -131,11 +131,11 @@
                 </a>
             </div>
             <a href="#" class="topMenu__logoRight">
-                <img class="img" src="./img/logo-sp-zajeziorze.png" alt="logo" />
+                <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-sp-zajeziorze.png"; ?>" alt="logo" />
             </a>
 
             <button class="btn--menu d-mobile" onclick="openMobileMenu()">
-                <img class="img" src="./img/menu.svg" alt="menu" />
+                <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/menu.svg"; ?>" alt="menu" />
             </button>
         </div>
     </div>
@@ -143,9 +143,9 @@
     <!-- PAGE -->
     <div class="hero">
         <div class="mainCarousel">
-            <img class="img" src="./img/slider.png" alt="slider" />
-            <img class="img" src="./img/slider.png" alt="slider" />
-            <img class="img" src="./img/slider.png" alt="slider" />
+            <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="slider" />
+            <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="slider" />
+            <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="slider" />
         </div>
 
         <h1 class="hero__text d-desktop">
@@ -181,11 +181,11 @@
             <div class="newsCarouselWrapper">
                 <button class="newsCarouselWrapper__arrow newsCarouselWrapper__arrow--prev"
                         onclick="newsCarouselPrev()">
-                    <img class="img" src="./img/arrow-left.svg" alt="left" />
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-left.svg"; ?>" alt="left" />
                 </button>
                 <button class="newsCarouselWrapper__arrow newsCarouselWrapper__arrow--next"
                         onclick="newsCarouselNext()">
-                    <img class="img" src="./img/arrow-right.svg" alt="left" />
+                    <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-right.svg"; ?>" alt="left" />
                 </button>
 
                 <div class="hero__indicators hero__indicators--news flex d-desktop">
@@ -203,7 +203,7 @@
                 <div class="newsCarousel">
                     <!-- News loop -->
                     <div class="newsCarousel__item">
-                        <img class="newsCarousel__item__image" src="./img/slider.png" alt="img" />
+                        <img class="newsCarousel__item__image" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="img" />
 
                         <div class="newsCarousel__item__content">
                             <h4 class="newsCarousel__item__header">
@@ -218,7 +218,7 @@
                         </div>
                     </div>
                     <div class="newsCarousel__item">
-                        <img class="newsCarousel__item__image" src="./img/slider.png" alt="img" />
+                        <img class="newsCarousel__item__image" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="img" />
 
                         <div class="newsCarousel__item__content">
                             <h4 class="newsCarousel__item__header">
@@ -233,7 +233,7 @@
                         </div>
                     </div>
                     <div class="newsCarousel__item">
-                        <img class="newsCarousel__item__image" src="./img/slider.png" alt="img" />
+                        <img class="newsCarousel__item__image" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="img" />
 
                         <div class="newsCarousel__item__content">
                             <h4 class="newsCarousel__item__header">
@@ -266,7 +266,7 @@
                     </p>
                     <span class="news__item__btn">
                         Czytaj dalej
-                        <img class="img" src="./img/arrow-right-blog.svg" alt="czytaj-dalej" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-right-blog.svg"; ?>" alt="czytaj-dalej" />
                     </span>
                 </a>
                 <a href="#" class="news__item">
@@ -283,7 +283,7 @@
                     </p>
                     <span class="news__item__btn">
                         Czytaj dalej
-                        <img class="img" src="./img/arrow-right-blog.svg" alt="czytaj-dalej" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-right-blog.svg"; ?>" alt="czytaj-dalej" />
                     </span>
                 </a>
                 <a href="#" class="news__item">
@@ -300,7 +300,7 @@
                     </p>
                     <span class="news__item__btn">
                         Czytaj dalej
-                        <img class="img" src="./img/arrow-right-blog.svg" alt="czytaj-dalej" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-right-blog.svg"; ?>" alt="czytaj-dalej" />
                     </span>
                 </a>
                 <a href="#" class="news__item">
@@ -317,7 +317,7 @@
                     </p>
                     <span class="news__item__btn">
                         Czytaj dalej
-                        <img class="img" src="./img/arrow-right-blog.svg" alt="czytaj-dalej" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-right-blog.svg"; ?>" alt="czytaj-dalej" />
                     </span>
                 </a>
                 <a href="#" class="news__item">
@@ -334,7 +334,7 @@
                     </p>
                     <span class="news__item__btn">
                         Czytaj dalej
-                        <img class="img" src="./img/arrow-right-blog.svg" alt="czytaj-dalej" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-right-blog.svg"; ?>" alt="czytaj-dalej" />
                     </span>
                 </a>
                 <a href="#" class="news__item">
@@ -351,7 +351,7 @@
                     </p>
                     <span class="news__item__btn">
                         Czytaj dalej
-                        <img class="img" src="./img/arrow-right-blog.svg" alt="czytaj-dalej" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/arrow-right-blog.svg"; ?>" alt="czytaj-dalej" />
                     </span>
                 </a>
             </div>
@@ -450,8 +450,8 @@
             <div class="flex flex--top">
                 <div class="footer__col">
                     <div class="footer__col__logos flex flex--start">
-                        <img class="img" src="./img/logo-stowarzyszenie.png" alt="stowarzyszenie" />
-                        <img class="img" src="./img/logo-sp-zajeziorze.png" alt="stowarzyszenie" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-stowarzyszenie.png"; ?>" alt="stowarzyszenie" />
+                        <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-sp-zajeziorze.png"; ?>" alt="stowarzyszenie" />
                     </div>
 
                     <h5 class="footer__col__headerAfterLogos">

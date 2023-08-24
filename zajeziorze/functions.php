@@ -141,7 +141,14 @@ function zajeziorze_scripts() {
 	wp_enqueue_style( 'zajeziorze-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'zajeziorze-style', 'rtl', 'replace' );
 
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap', false );
+    wp_enqueue_style( 'zajeziorze-style', get_stylesheet_uri() . '?n=17', array('google-fonts'), _S_VERSION );
+    wp_enqueue_style( 'zajeziorze-mobile', get_template_directory_uri() . '/mobile.css', array('zajeziorze-style', 'google-fonts'), _S_VERSION );
+
 	wp_enqueue_script( 'zajeziorze-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+    wp_enqueue_script( 'zajeziorze-siema', get_template_directory_uri() . '/js/siema.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'zajeziorze-main', get_template_directory_uri() . '/js/main.js', array('zajeziorze-siema'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

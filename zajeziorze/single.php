@@ -10,31 +10,42 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main class="site-main w">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+        <?php
+        while (have_posts()) {
+            the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+            $image_id = get_post_thumbnail_id(); // Pobranie ID zdjęcia wyróżniającego
+            $image_url = wp_get_attachment_image_src($image_id, 'full'); // Pobranie pełnego URL obrazka
+            $image_src = $image_url[0];
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'zajeziorze' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'zajeziorze' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+            // Wyświetlanie zdjęcia wyróżniającego
+            if (has_post_thumbnail()) {
+                ?>
+                <img class="img img--blog" src="<?php echo $image_src; ?>" alt="blog" />
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+                <?php
+            }
 
-		endwhile; // End of the loop.
-		?>
+            ?>
+            <h3 class="main__header main__header--blog">
+                <?php
+                    echo get_the_title();
+                ?>
+            </h3>
+
+            <div class="text-white blogContent">
+                <?php
+                    the_content();
+                ?>
+            </div>
+
+            <?php
+        }
+        ?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
