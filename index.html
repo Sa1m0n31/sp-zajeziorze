@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile.css" />
 </head>
 <body>
 <div class="container">
     <!-- HEADER -->
-    <div class="topBar">
+    <div class="topBar d-desktop">
         <div class="w flex">
             <div class="topBar__left flex flex--start">
                 <span class="topBar__left__item flex flex--start">
@@ -42,11 +43,51 @@
         </div>
     </div>
     <div class="topMenu">
+        <div class="mobileMenu d-mobile">
+            <button class="mobileMenu__close" onclick="closeMobileMenu()">
+                &times;
+            </button>
+
+            <a class="mobileMenu__item" href="#">
+                Strona główna
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Wydarzenia
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Nauczyciele
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Samorząd szkolny
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Rada rodziców
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Baza szkoły
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Stowarzyszenie
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Historia
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Klasy
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Rekrutacja
+            </a>
+            <a class="mobileMenu__item" href="#">
+                Kontakt
+            </a>
+        </div>
+
         <div class="w flex">
             <a href="#" class="topMenu__logoLeft">
                 <img class="img" src="./img/logo-stowarzyszenie.png" alt="stowarzyszenie" />
             </a>
-            <div class="topMenu__menu flex">
+            <div class="topMenu__menu flex d-desktop">
                 <a class="topMenu__menu__item flex flex--start" href="#">
                     <img class="img" src="./img/home.svg" alt="home" />
                     Strona główna
@@ -92,6 +133,10 @@
             <a href="#" class="topMenu__logoRight">
                 <img class="img" src="./img/logo-sp-zajeziorze.png" alt="logo" />
             </a>
+
+            <button class="btn--menu d-mobile" onclick="openMobileMenu()">
+                <img class="img" src="./img/menu.svg" alt="menu" />
+            </button>
         </div>
     </div>
 
@@ -103,8 +148,11 @@
             <img class="img" src="./img/slider.png" alt="slider" />
         </div>
 
-        <h1 class="hero__text">
+        <h1 class="hero__text d-desktop">
             "Dzisiaj należy wiedzieć co trzeba poznać jutro, by radzić sobie pojutrze."
+        </h1>
+        <h1 class="hero__text d-mobile">
+            SP Zajeziorze
         </h1>
 
         <div class="hero__indicators hero__indicators--main flex">
@@ -125,7 +173,7 @@
             <h2 class="main__header flex">
                 Aktualności
 
-                <a href="#" class="btn btn--mainArchive">
+                <a href="#" class="btn btn--mainArchive d-desktop">
                     Archiwum
                 </a>
             </h2>
@@ -140,7 +188,7 @@
                     <img class="img" src="./img/arrow-right.svg" alt="left" />
                 </button>
 
-                <div class="hero__indicators hero__indicators--news flex">
+                <div class="hero__indicators hero__indicators--news flex d-desktop">
                     <button class="hero__indicators__item center" onclick="newsCarouselGoTo(0)">
                         <span class="hero__indicators__item__inner"></span>
                     </button>
@@ -164,7 +212,7 @@
                             <h5 class="newsCarousel__item__subheader">
                                 Wspólnie z uczniami zakończyliśmy rok szkolny 2022/2023
                             </h5>
-                            <a href="#" class="btn btn--more">
+                            <a href="#" class="btn btn--more d-desktop">
                                 Czytaj dalej
                             </a>
                         </div>
@@ -179,7 +227,7 @@
                             <h5 class="newsCarousel__item__subheader">
                                 Wspólnie z uczniami zakończyliśmy rok szkolny 2022/2023
                             </h5>
-                            <a href="#" class="btn btn--more">
+                            <a href="#" class="btn btn--more d-desktop">
                                 Czytaj dalej
                             </a>
                         </div>
@@ -194,7 +242,7 @@
                             <h5 class="newsCarousel__item__subheader">
                                 Wspólnie z uczniami zakończyliśmy rok szkolny 2022/2023
                             </h5>
-                            <a href="#" class="btn btn--more">
+                            <a href="#" class="btn btn--more d-desktop">
                                 Czytaj dalej
                             </a>
                         </div>
