@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<div class="hero">
+<div class="hero d-desktop">
     <div class="mainCarousel">
         <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="slider" />
         <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/slider.png"; ?>" alt="slider" />
@@ -112,7 +112,7 @@ get_header();
                                             echo get_field('podtytul');
                                         ?>
                                     </h5>
-                                    <a href="<?php echo get_permalink(); ?>" class="btn btn--more d-desktop">
+                                    <a href="<?php echo get_permalink(); ?>" class="btn btn--more">
                                         Czytaj dalej
                                     </a>
                                 </div>
@@ -185,22 +185,22 @@ get_header();
 
         <div class="main__right__frames flex flex--top">
             <div class="frame frame--red">
-
+                <?php echo get_field('ramka_1', 92); ?>
             </div>
             <div class="frame frame--grey">
-
+                <?php echo get_field('ramka_2', 92); ?>
             </div>
             <div class="frame frame--red">
-
+                <?php echo get_field('ramka_3', 92); ?>
             </div>
             <div class="frame frame--grey">
-
+                <?php echo get_field('ramka_4', 92); ?>
             </div>
             <div class="frame frame--red">
-
+                <?php echo get_field('ramka_5', 92); ?>
             </div>
             <div class="frame frame--grey">
-
+                <?php echo get_field('ramka_6', 92); ?>
             </div>
         </div>
     </div>
@@ -216,7 +216,7 @@ get_header();
             lat realizuje program nauczania i pomaga dzieciom rozwijać swoje zdolności.
             Kształcimy i przygotowujemy do dalszej edukacji na poziomie liceum.
         </p>
-        <a href="" class="blackboard__btn center">
+        <a href="<?php echo get_page_link(get_page_by_title('Rekrutacja')->ID); ?>" class="blackboard__btn center">
             REKRUTACJA NA ROK SZKOLNY 2023/2024
         </a>
     </div>
@@ -230,13 +230,13 @@ get_header();
         <?php echo do_shortcode('[wpgmza id="1"]'); ?>
     </div>
 
-    <div class="contact flex">
+    <div class="contact flex flex--top">
         <div class="contact__item">
             <h5 class="contact__item__header">
                 Adres szkoły
             </h5>
             <div class="contact__item__text">
-                Facebook
+                <?php echo get_field('adres_szkoly', 92); ?>
             </div>
         </div>
         <div class="contact__item">
@@ -244,7 +244,7 @@ get_header();
                 Dane kontaktowe
             </h5>
             <div class="contact__item__text">
-                Facebook
+                <?php echo get_field('dane_kontaktowe', 92); ?>
             </div>
         </div>
         <div class="contact__item">
@@ -252,7 +252,7 @@ get_header();
                 Godziny kontaktu
             </h5>
             <div class="contact__item__text">
-                Facebook
+                <?php echo get_field('godziny_kontaktu', 92); ?>
             </div>
         </div>
         <div class="contact__item">
@@ -260,7 +260,7 @@ get_header();
                 Media społecznościowe
             </h5>
             <div class="contact__item__text">
-                Facebook
+                <?php echo get_field('media_spolecznosciowe', 92); ?>
             </div>
         </div>
     </div>

@@ -93,7 +93,7 @@
         </div>
 
         <div class="w flex">
-            <a href="<?php echo home_url(); ?>" class="topMenu__logoLeft">
+            <a href="<?php echo home_url(); ?>" class="topMenu__logoLeft d-desktop">
                 <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-stowarzyszenie.png"; ?>" alt="stowarzyszenie" />
             </a>
             <div class="topMenu__menu flex d-desktop">
@@ -143,7 +143,7 @@
                 <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/logo-sp-zajeziorze.png"; ?>" alt="logo" />
             </a>
 
-            <button class="btn--menu d-mobile" onclick="openMobileMenu()">
+            <button class="btn--menu d-mobile-flex center" onclick="openMobileMenu()">
                 <img class="img" src="<?php echo get_bloginfo("stylesheet_directory") . "/img/menu.svg"; ?>" alt="menu" />
             </button>
         </div>

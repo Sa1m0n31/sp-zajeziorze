@@ -122,6 +122,10 @@
         width: 100%;
     }
 
+    .pageContent--grid {
+        grid-template-columns: 1fr;
+    }
+
     .topBar__right__link--log {
         padding: 0 10px;
     }
@@ -168,6 +172,12 @@
         display: flex;
     }
 
+    .newsCarousel__item .btn--more {
+        width: 120px;
+        height: 30px;
+        font-size: 11px;
+    }
+
     .main__header {
         font-size: 21px;
     }
@@ -207,10 +217,6 @@
 
     .mapSection {
         padding: 50px 0 10px;
-    }
-
-    .map {
-        height: 200px;
     }
 
     .footer > .w > .flex {
