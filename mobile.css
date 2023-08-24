@@ -1,0 +1,37 @@
+@media(max-width: 1600px) {
+
+}
+
+@media(max-width: 1400px) {
+
+}
+
+@media(max-width: 1200px) {
+
+}
+
+@media(max-width: 996px) {
+
+}
+
+@media(max-width: 768px) {
+    .d-desktop {
+        display: none;
+    }
+
+    .d-mobile {
+        display: block;
+    }
+
+    .d-mobile-flex {
+        display: flex;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 576px) {
+
+}
